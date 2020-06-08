@@ -16,6 +16,12 @@
       href: install-on-server.md
     - name: 创建用户帐户和密码
       href: user-support.md
+- name: 教程
+  items:
+    - name: VS Code 入门
+      href: tutorials/wsl-vscode.md
+    - name: Git 入门
+      href: tutorials/wsl-git.md
 - name: 操作方法
   items:
     - name: 互操作性命令
