@@ -5,12 +5,12 @@ keywords: wsl，windows，windowssubsystem，gnu，linux，bash，git，github�
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 94166371fc0928d6be3b3cfd6cb595c6fac76608
-ms.sourcegitcommit: d95bdbc2fea991ba14a4c9ec53ee0ec19d6bbdb4
+ms.openlocfilehash: 687a12186d11343a2d4131e0fdeeef3bcec902fb
+ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84457789"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671007"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>在适用于 Linux 的 Windows 子系统上开始使用 Git
 
@@ -18,12 +18,12 @@ Git 是最常用的版本控制系统。 使用 Git，你可以跟踪对文件�
 
 ## <a name="git-can-be-installed-on-windows-and-on-wsl"></a>可以在 Windows 和 WSL 上安装 Git。
 
-需要注意的一个重要事项：启用 WSL 并安装 Linux 分发版时，将安装新的文件系统，与 Windows NTFS C：\ 分离计算机上的驱动器。 在 Linux 中，驱动器没有获得字母。 它们被提供装入点。 文件系统的根 `/` 是根分区（或文件夹）的装入点（对于 WSL）。 并非所有内容 `/` 都在同一驱动器上。 例如，在我的便携式计算机上，我安装了两个版本的 Ubuntu （20.04 和18.01）以及 Debian。 如果打开这些分发，请选择包含命令的根目录 `cd ~` ，然后输入命令 `explorer.exe .` ，Windows 文件资源管理器将打开并显示该分发的目录路径。
+需要注意的一个重要事项：启用 WSL 并安装 Linux 分发版时，将安装新的文件系统，与 Windows NTFS C：\ 分离计算机上的驱动器。 在 Linux 中，驱动器没有获得字母。 它们被提供装入点。 文件系统的根 `/` 是根分区（或文件夹）的装入点（对于 WSL）。 并非所有内容 `/` 都在同一驱动器上。 例如，在我的便携式计算机上，我安装了两个版本的 Ubuntu （20.04 和18.04）以及 Debian。 如果打开这些分发，请选择包含命令的根目录 `cd ~` ，然后输入命令 `explorer.exe .` ，Windows 文件资源管理器将打开并显示该分发的目录路径。
 
 | Linux 发行版 | 访问主文件夹的 Windows 路径 |
 | ----------- | ----------- |
 | Ubuntu 20.04 | `\\wsl$\Ubuntu-20.04\home\username` |
-| Ubuntu 18.01 | `\\wsl$\Ubuntu-18.04\home\username` |
+| Ubuntu 18.04 | `\\wsl$\Ubuntu-18.04\home\username` |
 | Debian | `\\wsl$\Debian\home\username` |
 | Windows PowerShell | `C:\Users\username` |
 
