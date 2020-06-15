@@ -43,4 +43,8 @@
 - name: 疑难解答
   href: troubleshooting.md
 - name: 发行说明
-  href: release-notes.md
+  items:
+    - name: 常规发行说明
+      href: release-notes.md
+    - name: Linux 内核发行说明
+      href: kernel-release-notes.md
