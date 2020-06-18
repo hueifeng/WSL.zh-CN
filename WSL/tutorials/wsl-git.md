@@ -5,12 +5,12 @@ keywords: wsl，windows，windowssubsystem，gnu，linux，bash，git，github�
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 687a12186d11343a2d4131e0fdeeef3bcec902fb
-ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
+ms.openlocfilehash: 550355ea77c97d68130c8d85e9aef2a6b49ffe63
+ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84671007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978240"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>在适用于 Linux 的 Windows 子系统上开始使用 Git
 
@@ -36,13 +36,32 @@ Git 是最常用的版本控制系统。 使用 Git，你可以跟踪对文件�
 
 ## <a name="installing-git"></a>安装 Git
 
-Git 已随大多数适用于 Linux 的 Windows 子系统一起安装，但是，你可能想要更新到最新版本，并且你将需要设置 git 配置文件。
+Git 已安装了大多数适用于 Linux 分发的 Windows 子系统，但你可能想要更新到最新版本。 还需要设置 git 配置文件。
 
-若要安装 Git，请参阅[适用于 Linux 的 Git 下载](https://git-scm.com/download/linux)站点。 每个 Linux 分发都有自己的包管理器和安装命令。 例如，若要在 Alpine 分发上安装 Git，请使用： `apk add git` 。 如果尚未[安装 Git For Windows](https://git-scm.com/download/win) ，则还可能需要安装。
+若要安装 Git，请参阅[适用于 Linux 的 Git 下载](https://git-scm.com/download/linux)站点。 每个 Linux 分发都有自己的包管理器和安装命令。
+
+对于 Ubuntu/Debian 中的最新稳定 GIt 版本，请输入以下命令：
+
+```bash
+sudo apt-get install git
+```
+
+> [!NOTE]
+> 如果尚未[安装 Git For Windows](https://git-scm.com/download/win) ，则还可能需要安装。
 
 ## <a name="git-config-file-setup"></a>Git 配置文件设置
 
-若要设置 Git 配置文件，请打开所使用的分发的命令行，并输入：， `git config --global user.name "Your Name"` 然后按 `git config --global user.email "youremail@domain.com"` 。 使用创建 Git 帐户时所用的名称和电子邮件地址替换报价中的内容。
+若要设置 Git 配置文件，请打开正在处理的分发的命令行，并使用以下命令设置你的名称（将 "名称" 替换为你的 Git 用户名）：
+
+```bash
+ `git config --global user.name "Your Name"`
+```
+
+使用此命令设置电子邮件（将 " youremail@domain.com " 替换为你在 Git 帐户中使用的电子邮件）：
+
+```bash
+`git config --global user.email "youremail@domain.com"`
+```
 
 > [!TIP]
 > 如果你还没有 Git 帐户，则可以[在 GitHub 上注册一个帐户](https://github.com/join)。 如果以前从未使用过 Git，则 [GitHub 指南](https://guides.github.com/)可以帮助入门。 如果需要编辑 git 配置，则可以使用内置文本编辑器（如 nano：`nano ~/.gitconfig`）来执行此操作。
@@ -61,9 +80,12 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec
 
 现在，在 WSL 分发版中执行的任何 git 操作都将使用凭据管理器。 如果已为主机缓存凭据，那么它会从凭据管理器访问这些凭据。 如果尚未缓存凭据，你将收到一个请求凭据的对话响应，即使你处于 Linux 控制台中也是如此。
 
+> [!NOTE]
+> 如果使用 GPG 密钥进行代码签名安全，则可能需要[将 GPG 密钥与 GitHub 电子邮件相关联](https://help.github.com/en/github/authenticating-to-github/associating-an-email-with-your-gpg-key)。
+
 ## <a name="adding-a-git-ignore-file"></a>添加 Git Ignore 文件
 
-建议将[.gitignore 文件](https://help.github.com/en/articles/ignoring-files)添加到项目。 GitHub 提供了[一个有用的 .gitignore 模板集合](https://github.com/github/gitignore)，其中包含根据用例组织的建议的 .gitignore 文件设置。
+建议将[.gitignore 文件](https://help.github.com/en/articles/ignoring-files)添加到项目。 GitHub 提供了[一个有用的 .gitignore 模板集合](https://github.com/github/gitignore)，其中包含根据用例组织的建议的 .gitignore 文件设置。 例如，下面是[Node.js 项目的 GitHub 的默认 .gitignore 模板](https://github.com/github/gitignore/blob/master/Node.gitignore)。
 
 如果选择[使用 GitHub 网站创建新的](https://help.github.com/articles/create-a-repo)存储库，则可以使用以下复选框来初始化存储库，其中包含一个自述文件、一个针对特定项目类型的 .gitignore 文件，以及用于添加许可证（如果需要）的选项。
 
