@@ -176,5 +176,5 @@ wsl --set-default-version 2
 | `lxrun`                     | lxrun 命令用于管理 WSL 实例。 |
 | `lxrun /install`            | 启动下载和安装过程。 <br/> 可以添加 **/y** 来绕过所有提示。  系统会自动接受确认提示，默认用户将设置为 root。          |
 | `lxrun /uninstall`          | 卸载并删除 Ubuntu 映像。  默认情况下，这不会删除用户的 Ubuntu 主目录。 <br/> 可以添加 **/y** 来自动接受确认提示 <br/>**/full** 卸载并删除用户的 Ubuntu 主目录         |
-| `lxrun /setdefaultuser <userName>`     | 设置默认的 Bash on Ubuntu 用户。 如果指定的用户不存在，该命令会提示输入密码。  有关详细信息，请访问：https://aka.ms/wslusers。 <br/> **/y** 绕过密码提示。  将创建不带密码的用户。|
+| `lxrun /setdefaultuser <userName>`     | 设置默认的 Bash on Ubuntu 用户。 如果指定的用户不存在，该命令会提示输入密码。  有关详细信息，请访问： https://aka.ms/wslusers 。 <br/> **/y** 绕过密码提示。  将创建不带密码的用户。|
 | `lxrun /update`            | 更新子系统的包索引          |

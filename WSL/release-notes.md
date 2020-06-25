@@ -65,7 +65,7 @@ idleThreshold = <integer> # Set the idle threshold for memory compaction, 0 disa
 ## <a name="build-19002"></a>版本 19002
 有关版本 19002 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/10/17/announcing-windows-10-insider-preview-build-19002/)。
 
-* [WSL] 解决了有关处理某些 Unicode 字符的问题：https://github.com/microsoft/terminal/issues/2770
+* [WSL] 解决了有关处理某些 Unicode 字符的问题： https://github.com/microsoft/terminal/issues/2770
 * [WSL] 解决了在版本到版本升级后立即启动时可能会注销发行版的罕见情况。
 * [WSL] 解决了 wsl.exe --shutdown 的以下小问题：无法取消实例空闲计时器。
 
@@ -620,10 +620,10 @@ wslconfig.exe /terminate <DistributionName>
 * 在启用元数据的情况下使用 DrvFs 创建的特殊文件（例如 WSL 符号链接，或 fifos 和 sockets）现在可以从 Windows 复制和移动。
 
 #### <a name="wsl-is-more-configurable-with-wslconf"></a>可以使用 wsl.conf 更方便地配置 WSL
-我们添加了一个方法，用于自动配置 WSL 中每次启动子系统时要应用的某些功能。 这包括自动装载选项和网络配置。 有关详细信息，请参阅博客文章：https://aka.ms/wslconf
+我们添加了一个方法，用于自动配置 WSL 中每次启动子系统时要应用的某些功能。 这包括自动装载选项和网络配置。 有关详细信息，请参阅博客文章： https://aka.ms/wslconf
 
 #### <a name="af_unix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX 允许在 WSL 上的 Linux 进程与 Windows 本机进程之间建立套接字连接
-现在，WSL 和 Windows 应用程序可以通过 Unix 套接字相互通信。 假设你要在 Windows 中运行某个服务，并使其可在 Windows 和 WSL 应用中使用。 现在可以通过 Unix 套接字实现此目的。 有关详细信息，请参阅博客文章：https://aka.ms/afunixinterop
+现在，WSL 和 Windows 应用程序可以通过 Unix 套接字相互通信。 假设你要在 Windows 中运行某个服务，并使其可在 Windows 和 WSL 应用中使用。 现在可以通过 Unix 套接字实现此目的。 有关详细信息，请参阅博客文章： https://aka.ms/afunixinterop
 
 ### <a name="wsl"></a>WSL
 * 支持使用 MAP_NORESERVE 的 mmap() [GH 121、2784]
@@ -955,7 +955,7 @@ wslconfig.exe /terminate <DistributionName>
 #### <a name="console"></a>控制台
 - 修复横线/下划线四处可见的问题 [GH 2168]
 - 修复进程顺序更改，使 NPM 更难以关闭的问题 [GH 2170]
-- 添加了新的色彩方案：https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
+- 添加了新的色彩方案： https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
 
 ### <a name="ltp-results"></a>LTP 结果：
 自 16251 以来无更改
@@ -1315,7 +1315,7 @@ Syscall 总数：384 </br>
 
 - 已知 bug：控制台无法识别某些 Ctrl + <key> 输入。  这包括将充当普通“c”按键的 ctrl-c 命令。
 
-  - 解决方法：将备用键映射到 Ctrl+C。 例如，若要将 Ctrl+K 映射到 Ctrl+C，请执行：`stty intr \^k`。  这种映射是按终端进行的，每次启动 bash 都必须执行。  用户可以探索该选项，以将此映射包含在其 `.bashrc` 中
+  - 解决方法：将备用键映射到 Ctrl+C。 例如，若要将 Ctrl+K 映射到 Ctrl+C，请执行：`stty intr \^k`。  这种映射是按终端进行的，每次启动 bash 都必须执行。 用户可以探索该选项，以将此映射包含在其 `.bashrc` 中
 
 ### <a name="fixed"></a>固定
 
@@ -1341,7 +1341,7 @@ Syscall 总数：384 </br>
 两个已知问题：
 - 已知 bug：控制台无法识别某些 Ctrl + <key> 输入。  这包括将充当普通“c”按键的 ctrl-c 命令。
 
-  - 解决方法：将备用键映射到 Ctrl+C。 例如，若要将 Ctrl+K 映射到 Ctrl+C，请执行：`stty intr \^k`。  这种映射是按终端进行的，每次启动 bash 都必须执行。  用户可以探索该选项，以将此映射包含在其 `.bashrc` 中
+  - 解决方法：将备用键映射到 Ctrl+C。 例如，若要将 Ctrl+K 映射到 Ctrl+C，请执行：`stty intr \^k`。  这种映射是按终端进行的，每次启动 bash 都必须执行。 用户可以探索该选项，以将此映射包含在其 `.bashrc` 中
 
 - 当 WSL 运行时，系统线程将消耗 100% 的 CPU 核心。  根本原因已解决并已在内部修复。
 
@@ -1953,7 +1953,7 @@ Windows 10 周年更新版的第一个预览体验内部版本。
 ### <a name="new-features"></a>新功能
 * 现在支持 Linux 用户。  安装 Windows 上的 Ubuntu Bash 时会提示创建 Linux 用户。  有关详细信息，请访问 https://aka.ms/wslusers
 * 现在，主机名将设置为 Windows 计算机名，而不再是 @localhost
-* 有关内部版本 14328 的详细信息，请访问：https://aka.ms/wip14328
+* 有关内部版本 14328 的详细信息，请访问： https://aka.ms/wip14328
 
 ### <a name="fixed"></a>固定
 * 非 /mnt/<drive> 文件的符号链接改进

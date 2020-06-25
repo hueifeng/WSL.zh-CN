@@ -4,12 +4,12 @@ description: 有关列出和配置在适用于 Linux 的 Windows 子系统上运
 keywords: BashOnWindows, bash, wsl, windows, 适用于 linux 的 windows 子系统, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: dc488ab988d8e158b5eff7a486a2fe707dbedfd7
-ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
+ms.openlocfilehash: e97b1030d5891bf8aa1cb656646a4d9e1d480a3d
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153120"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336080"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL 命令和启动配置
 
@@ -18,7 +18,7 @@ ms.locfileid: "84153120"
 [安装](install-win10.md)了 WSL 后，可通过多种方式运行 Linux 分发版。
 
 1. 通过访问 Windows 的 "开始" 菜单并键入已安装的分发的名称，打开 Linux 分发版。 例如： "Ubuntu"。
-2. 在 Windows 命令提示符或 PowerShell 中，输入已安装的分发的名称。 例如：`ubuntu`
+2. 在 Windows 命令提示符或 PowerShell 中，输入已安装的分发的名称。 例如： `ubuntu`
 3. 在 Windows 命令提示符或 PowerShell 中，若要在当前命令行内打开默认的 Linux 分发，请输入： `wsl.exe` 。
 4. 在 Windows 命令提示符或 PowerShell 中，若要在当前命令行内打开默认的 Linux 分发，请输入： `wsl [command]` 。
 
@@ -309,15 +309,15 @@ WSL 支持两个节：`automount` 和 `network`。
 
 这些选项在版本18980和更高版本中可用。
 
-| 键 | 值 | default | 说明|
+| 键 | 值 | 默认值 | 说明|
 |:----|:----|:----|:----|
-| default | string | 首次运行时创建的初始用户名 | 设置此项将指定在首次启动 WSL 会话时要运行的用户。 |
+| 默认值 | string | 首次运行时创建的初始用户名 | 设置此项将指定在首次启动 WSL 会话时要运行的用户。 |
 
 ## <a name="configure-global-options-with-wslconfig"></a>用 wslconfig 配置全局选项。
 
 > **在 Windows 版本19041及更高版本中可用**
 
-可以通过将文件放入用户文件夹的根目录来配置全局 WSL 选项 `.wslconfig` ： `C:\Users\<yourUserName>\.wslconfig` 。 
+可以通过将文件放入用户文件夹的根目录来配置全局 WSL 选项 `.wslconfig` ： `C:\Users\<yourUserName>\.wslconfig` 。 其中许多文件都与 WSL 2 相关，请记住，你可能需要运行 `wsl --shutdown` 以关闭 WSL 2 VM，然后重新启动 WSL 实例，这些更改才会生效。
 
 下面是 wslconfig 文件的示例：
 
@@ -336,13 +336,13 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 
 这些设置会影响支持任何 WSL 2 分发的虚拟机。
 
-| 键 | 值 | default | 说明|
+| 键 | 值 | 默认值 | 说明|
 |:----|:----|:----|:----|
 | 内核 (kernel) | string | Microsoft 构建的内核提供的收件箱 | 自定义 Linux 内核的绝对 Windows 路径。 |
 | memory | 大小 | Windows 上的总内存的80% | 要分配给 WSL 2 VM 的内存量。 |
 | 款 | number | Windows 上的处理器数相同 | 要分配给 WSL 2 VM 的处理器数量。 |
 | localhostForwarding | boolean | `true` | 布尔值，指定是否应通过 localhost： port 将绑定到 WSL 2 VM 中的通配符或 localhost 的端口连接到主机。 |
-| kernelCommandLine | string | 空白 | 其他内核命令行参数。 |
+| kernelCommandLine | string | 空 | 其他内核命令行参数。 |
 | swap | 大小 | Windows 上的25% 内存大小向上舍入到最接近的 GB | 要添加到 WSL 2 VM 的交换空间量，0表示没有交换文件。 |
 | 交换文件 | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | 交换虚拟硬盘的绝对 Windows 路径。 |
 
