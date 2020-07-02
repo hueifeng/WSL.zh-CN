@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, 适用于 linux 的 windows 子系�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 805b7d266020c62e0c6f58889541517d44db3726
-ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
+ms.openlocfilehash: ebcd7f6b10d2b734b1f2a66f64a5e3292855bcf4
+ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153080"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671017"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 安装指南
 
@@ -25,20 +25,6 @@ ms.locfileid: "84153080"
 ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
-```
-
-**如果你正在寻求 100% 的系统调用兼容性和更快的 IO 性能，请阅读下文以安装 WSL 2！**
-
-只有 Windows 10 版本 2004 的内部版本 19041 或更高版本中才提供 WSL 2。 你可能需要[更新 Windows 版本](ms-settings:windowsupdate)。
-
-**如果要继续安装 WSL 1，请在系统提示时重新启动计算机，并访问[此处](./install-on-server.md#download-a-linux-distribution)继续安装**
-
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>启用“虚拟机平台”可选组件
-
-确保安装了“虚拟机平台”可选组件。 可以通过在 PowerShell 中运行以下命令来执行该操作：
-
-```powershell
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 ## <a name="download-a-linux-distribution"></a>下载 Linux 分发版
