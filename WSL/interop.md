@@ -4,12 +4,12 @@ description: 介绍 Windows 与适用于 Linux 的 Windows 子系统上运行的
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: b1c7a64a86cf088159d1abee3b341328151428f6
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: 2a9b6c8ac65fe28e029ada7f86475c44220a93fe
+ms.sourcegitcommit: cb8a61e7de08b1c18622fc78bc5dfa38786e921a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270841"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663130"
 ---
 # <a name="windows-interoperability-with-linux"></a>Windows 与 Linux 的互操作性
 
@@ -147,6 +147,7 @@ WSL 和 Windows 共享一个特殊环境变量 `WSLENV`（为了桥接 Windows �
 * 它是共享的；它同时在 Windows 和 WSL 环境中存在。
 * 它是要在 Windows 与 WSL 之间共享的环境变量列表。
 * 它可以设置环境变量的格式，使其能够在 Windows 和 WSL 中正常运行。
+* 它可以帮助 WSL 和 Win32 之间的流。
 
 > [!NOTE]
 > 在 17063 以前，只有 WSL 可访问的 Windows 环境变量是 `PATH`（因此可以从 WSL 下启动 Win32 可执行文件）。 从 17063 开始，`WSLENV` 开始受支持。
@@ -163,6 +164,8 @@ WSL 和 Windows 共享一个特殊环境变量 `WSLENV`（为了桥接 Windows �
 * `/w` - 指示仅当从 WSL 运行 Win32 时，才应包含此环境变量。
 
 可按需组合标志。
+
+[阅读有关 WSLENV 的详细信息](https://devblogs.microsoft.com/commandline/share-environment-vars-between-wsl-and-windows/)，包括将 WSLENV 的值设置为其他预定义环境变量串联的常见问题解答和示例，每个示例都带有一个斜杠后缀，斜杠后跟标志，用于指定应如何转换值以及如何使用脚本传递变量。 本文还提供使用 [ 编程语言](https://golang.org/)设置开发环境的示例，该示例配置为在 WSL 和 Win32 之间共享 GOPATH。
 
 ## <a name="disable-interoperability"></a>禁用互操作性
 

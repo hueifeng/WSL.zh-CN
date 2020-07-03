@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, wsl2, Windows, 适用于 Linux 的 Windows �
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f74be1e61efa39f67093004584a1fdef69b5eb48
-ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
+ms.openlocfilehash: 6ed3c98fa674e595b2fb05a989ab72f38cf45cbe
+ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153102"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978230"
 ---
 # <a name="whats-new-in-wsl-2"></a>WSL 2 中的新增功能
 

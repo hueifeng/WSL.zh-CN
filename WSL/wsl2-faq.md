@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 35edad06775e75eef6d81d018355d8f28d772deb
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 89b8a29f0c2d24a3c97d9661db3d83963629f34f
+ms.sourcegitcommit: cb8a61e7de08b1c18622fc78bc5dfa38786e921a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235897"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663110"
 ---
 # <a name="wsl-2-faqs"></a>WSL 2 常见问题解答
 
@@ -32,7 +32,7 @@ WSL 2 在当前可使用 WSL 的所有 SKU 上都可使用，包括 Windows 10 �
 
 当使用 Hyper-V 时，某些第三方应用程序无法工作，这意味着当启用了 WSL 2 时，这些应用程序（如 VMware 和 VirtualBox）将无法运行。 但最近，VirtualBox 和 VMware 都发布了支持 Hyper-V 和 WSL2 的版本！ 可[在此处了解有关 VirtualBox 的更改的详细信息][1]，并可[在此处了解有关 VMware 的更改的详细信息][4]。
 
-我们正在研究帮助解决此问题的方法。 例如，我们向第三方虚拟化提供商公开了一组称为[虚拟机监控程序平台][2]的 API，可以用来使其软件与 Hyper-V 的软件兼容。 这使得应用程序可以将 Hyper-V 体系结构用于其模拟，例如，现在都与 Hyper-V 兼容的 [Google 安卓模拟器][3]和 VirtualBox 6 及更高版本。
+我们一直在开发解决方案以支持 Hyper-V 的第三方集成。 例如，我们向第三方虚拟化提供商公开了一组称为[虚拟机监控程序平台][2]的 API，可以用来使其软件与 Hyper-V 兼容。 这使得应用程序可以将 Hyper-V 体系结构用于其模拟，例如，现在都与 Hyper-V 兼容的 [Google 安卓模拟器][3]和 VirtualBox 6 及更高版本。
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>是否可以在 WSL 2 中访问 GPU？ 是否计划增加硬件支持？
 

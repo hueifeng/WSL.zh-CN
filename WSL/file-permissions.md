@@ -6,12 +6,12 @@ ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
-ms.openlocfilehash: 66cded36fb7182a54a05e7794250808665bd4cf1
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 81d4cfa1ae57cdd077ba8cbd614111881724718a
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235850"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336070"
 ---
 # <a name="file-permissions-for-wsl"></a>WSL 的文件权限
 
@@ -108,4 +108,4 @@ Chmod 将根据文件已有的现有元数据更改或添加元数据。
 
 可以使用 wsl.conf 中的装载选项在 Windows 驱动器内配置文件权限。 装载选项允许你设置 `umask`、`dmask` 和 `fmask` 权限掩码。 `umask` 应用于所有文件，`dmask` 只应用于目录，而 `fmask` 只应用于文件。 这些权限掩码在应用到文件时会通过一个“逻辑或”操作进行计算，例如：如果 `umask` 值为 `023` 并且 `fmask` 值为 `022`，则为文件生成的权限掩码将为 `023`。
 
-有关如何执行此操作的说明，请参阅[使用 wslconf 配置启动设置](./wsl-config.md#configure-launch-settings-with-wslconf)一文。
+有关如何执行此操作的说明，请参阅[使用 wslconf 配置按分发版启动设置](./wsl-config.md#configure-per-distro-launch-settings-with-wslconf)一文。

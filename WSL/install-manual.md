@@ -5,12 +5,12 @@ keywords: wsl, 适用于 linux 的 windows 子系统, 手动安装, 手动安装
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 621b2619d6c62e0b6c4e53f7791fc587c1c8f878
-ms.sourcegitcommit: 09f5eb0f6062642e5c86deb1f34307ce3429163a
+ms.openlocfilehash: d948ce9d304314bdd15b98136b8a99ca35723139
+ms.sourcegitcommit: e67eb4aedff57a304188ca3360aba25605f8bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84211713"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746273"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手动下载适用于 Linux 的 Windows 子系统发行版包
 
@@ -23,6 +23,8 @@ ms.locfileid: "84211713"
 ## <a name="downloading-distros"></a>下载发行版
 
 如果 Microsoft Store 应用不可用，则可以通过单击以下链接来下载并手动安装 Linux 发行版：
+* [Ubuntu 20.04](https://aka.ms/wslubuntu2004)
+* [Ubuntu 20.04 ARM](https://aka.ms/wslubuntu2004arm)
 * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
 * [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)

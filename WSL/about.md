@@ -6,23 +6,25 @@ ms.date: 05/12/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: 90a661c408cacbef95a869ac896a40381120d52e
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: 75da6389beec4af7ac684ec7ee2ef31431e14071
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270791"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336060"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>什么是适用于 Linux 的 Windows 子系统？
 
-适用于 Linux 的 Windows 子系统可让开发人员按原样运行 GNU/Linux 环境 - 包括大多数命令行工具、实用工具和应用程序 - 且不会产生虚拟机开销。
+适用于 Linux 的 Windows 子系统可让开发人员按原样运行 GNU/Linux 环境 - 包括大多数命令行工具、实用工具和应用程序 - 且不会产生传统虚拟机或双启动设置开销。
 
 您可以：
 
 * [在 Microsoft Store](https://aka.ms/wslstore) 中选择你偏好的 GNU/Linux 分发版。
 * 运行常用的命令行软件工具（例如 `grep`、`sed`、`awk`）或其他 ELF-64 二进制文件。
 * 运行 Bash shell 脚本和 GNU/Linux 命令行应用程序，包括：  
-    * 工具：vim、emacs、tmux *语言：[NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2)、Javascript、[Python](https://docs.microsoft.com/windows/python/web-frameworks)、Ruby、C/ C++、C# 与 F#、Rust、Go 等 *服务：SSHD、MySQL、Apache、lighttpd、[MongoDB](https://docs.microsoft.com/windows/nodejs/databases)、[PostgreSQL](https://docs.microsoft.com/windows/python/databases)。
+    * 工具：vim、emacs、tmux
+    * 语言：[NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2)、Javascript、[Python](https://docs.microsoft.com/windows/python/web-frameworks)、Ruby、C/ C++、C# 与 F#、Rust、Go 等。
+    * 服务：SSHD、MySQL、Apache、lighttpd、[MongoDB](https://docs.microsoft.com/windows/nodejs/databases)、[PostgreSQL](https://docs.microsoft.com/windows/python/databases)。
 * 使用自己的 GNU/Linux 分发包管理器安装其他软件。
 * 使用类似于 Unix 的命令行 shell 调用 Windows 应用程序。
 * 在 Windows 上调用 GNU/Linux 应用程序。

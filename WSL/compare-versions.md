@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windows 子系统, gnu, linux, ubun
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: aa656d2e5a301d3f5519065246ba99941e74f642
-ms.sourcegitcommit: 53e6a01cbb989dc1aeaba465af4730afe71beb40
+ms.openlocfilehash: bbd5b36f7857d136d3eb2f75eb3d1a36ac2b94f7
+ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978260"
 ---
 # <a name="comparing-wsl-2-and-wsl-1"></a>比较 WSL 2 和 WSL 1
 
@@ -28,7 +28,7 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
  托管 VM| ❌ | ✅
  完整的 Linux 内核| ❌ |✅
  完全的系统调用兼容性| ❌ | ✅
- 可以与当前版本的 VM Ware 和 VirtualBox 一起运行| ✅ | ❌
+ 可以与当前版本的 VMWare 和 VirtualBox 一起运行| ✅ | ❌
  跨 OS 文件系统的性能| ✅ | ❌
 
 已在使用 WSL 1 并且想要升级到 WSL 2？ 请按照说明[更新到 WSL 2](./install-win10.md#update-to-wsl-2)！
@@ -36,7 +36,7 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
 只有 Windows 10 版本 2004 的内部版本 19041 或更高版本中才提供 WSL 2。 通过按 Windows 徽标键 + R，检查你的 Windows 版本，然后键入 **winver**，选择“确定”。 （或者在 Windows 命令提示符下输入 `ver` 命令）。 你可能需要[更新到最新的 Windows 版本](ms-settings:windowsupdate)。 对于低于 19041 的版本，WSL 根本不受支持。
 
 > [!NOTE]
-> WSL 2 可与[以前版本的 VM Ware](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) 和 [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) 配合使用。
+> WSL 2 可与[以前版本的 VMWare](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) 和 [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) 配合使用。
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>使用 Linux 文件系统以提高性能
 
@@ -47,16 +47,16 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
 * 使用 Linux 文件系统根目录：`\\wsl$\Ubuntu-18.04\home\<user name>\Project`
 * 而不使用 Windows 文件系统根目录：`C:\Users\<user name>\Project`
 
-通过 WSL 发行版（如 Ubuntu）使用的项目文件必须位于 Linux 根文件系统中，才能利用更快的文件系统访问速度。
+通过 WSL 分发版（如 Ubuntu）使用的项目文件必须位于 Linux 根文件系统中，才能利用更快的文件系统访问速度。
 
-可以使用 Windows 应用和工具（如文件资源管理器）访问 Linux 根文件系统。尝试打开 Linux 发行版（如 Ubuntu），通过输入以下命令确保你位于 Linux 主目录中：`cd ~`。然后通过输入 `explorer.exe .`（不要忘记尾部的句点），在文件资源管理器中打开 Linux 文件系统
+可以使用 Windows 应用和工具（如文件资源管理器）访问 Linux 根文件系统。 尝试打开 Linux 分发版（如 Ubuntu），通过输入以下命令确保你位于 Linux 主目录中：`cd ~`。 然后通过输入 `explorer.exe .`（不要忘记尾部的句点），在文件资源管理器中打开 Linux 文件系统。
 
 ## <a name="exceptions-for-using-wsl-1-rather-than-wsl-2"></a>例外情况（使用 WSL 1 而不是 WSL 2）
 
 我们建议使用 WSL 2，因为它提供更快的性能和100% 的系统调用兼容性。 但是，在某些特定情况下，你可能会更倾向于使用 WSL 1。 在以下情况下，请考虑使用 WSL 1：
 
 * 你的项目文件必须存储在 Windows 文件系统中。
-  * 如果你要使用 WSL Linux 发行版来访问 Windows 文件系统上的项目文件，并且这些文件无法存储在 Linux 文件系统上，则通过使用 WSL 1，你可跨 OS 文件系统实现更快的性能。
+  * 如果你将使用 WSL Linux 分发版来访问 Windows 文件系统上的项目文件，并且这些文件无法存储在 Linux 文件系统上，那么，通过使用 WSL 1，你将跨 OS 文件系统实现更快的性能。
 * 一个项目要求对相同的文件使用 Windows 和 Linux 工具进行交叉编译。
   * 在 WSL 1 中，跨 Windows 和 Linux 操作系统的文件性能比 WSL 2 中更快，因此如果要使用 Windows 应用程序来访问 Linux 文件，则目前通过 WSL 1 可实现更快的性能。
 
@@ -97,13 +97,13 @@ WSL 2 在实际 Linux 内核上使用轻量级实用工具 VM，内存占用量�
 
 ### <a name="accessing-linux-networking-apps-from-windows-localhost"></a>从 Windows (localhost) 访问 Linux 网络应用
 
-如果要在 Linux 发行版中构建网络应用（例如，在 NodeJS 或 SQL Server 上运行的应用），可以使用 `localhost` 从 Windows 应用（如 Edge 或 Chrome Internet 浏览器）访问它（就像往常一样）。
+如果要在 Linux 分发版中构建网络应用（例如，在 NodeJS 或 SQL server 上运行的应用），可以使用 `localhost` 从 Windows 应用（如 Edge 或 Chrome Internet 浏览器）访问它（就像往常一样）。
 
 但是，如果运行的是较旧版本的 Windows（版本 18945 或更低版本），则需要获取 Linux 主机 VM 的 IP 地址（或[更新到最新的 Windows 版本](ms-settings:windowsupdate)）。
 
-若要查找为 Linux 发行版提供支持的虚拟机的 IP 地址，请执行以下操作：
+若要查找为 Linux 分发版提供支持的虚拟机的 IP 地址，请执行以下操作：
 
-* 在 WSL 发行版（例如 Ubuntu）中运行以下命令：`ip addr`
+* 在 WSL 分发版（即 Ubuntu）中运行以下命令：`ip addr`
 * 查找并复制 `eth0` 接口的 `inet` 值下的地址。
 * 如果已安装 grep 工具，请通过使用以下命令筛选输出来更轻松地查找此地址：`ip addr | grep eth0`
 * 使用此 IP 地址连接到 Linux 服务器。
@@ -114,8 +114,8 @@ WSL 2 在实际 Linux 内核上使用轻量级实用工具 VM，内存占用量�
 
 ### <a name="accessing-windows-networking-apps-from-linux-host-ip"></a>从 Linux（主机 IP）访问 Windows 网络应用
 
-如果要从 Linux 发行版（例如 Ubuntu）访问 Windows 上运行的网络应用（例如，在 NodeJS 或 SQL Server 上运行的应用），则需要使用主机的 IP 地址。虽然这不是一种常见方案，但你可以执行以下步骤来使其可行。
-    - 通过在 Linux 发行版中运行以下命令来获取主机的 IP 地址：`cat /etc/resolv.conf`
+如果要从 Linux 分发版（即 Ubuntu）访问 Windows 上运行的网络应用（例如，在 NodeJS 或 SQL 服务器上运行的应用），则需要使用主机的 IP 地址。 虽然这不是一种常见方案，但你可以执行以下步骤来使其可行。
+    - 通过在 Linux 分发版中运行以下命令来获取主机的 IP 地址：`cat /etc/resolv.conf`
     - 复制以下词语后面的 IP 地址：`nameserver`。
     - 使用复制的 IP 地址连接到任何 Windows 服务器。
 
@@ -131,28 +131,28 @@ WSL 2 在实际 Linux 内核上使用轻量级实用工具 VM，内存占用量�
 
 例如，你可能需要将应用程序绑定到 `0.0.0.0` 而非 `127.0.0.1`。 以使用 Flask 的 Python 应用为例，可以通过以下命令执行此操作：`app.run(host='0.0.0.0')`。 进行这些更改时请注意安全性，因为这将允许来自你的 LAN 的连接。
 
-#### <a name="accessing-a-wsl-2-distribution-from-your-local-area-network-lan"></a>从局域网 (LAN) 访问 WSL 2 发行版
+#### <a name="accessing-a-wsl-2-distribution-from-your-local-area-network-lan"></a>从局域网 (LAN) 访问 WSL 2 分发版
 
-当使用 WSL 1 发行版时，如果计算机设置为可供 LAN 访问，那么在 WSL 中运行的应用程序也可供在 LAN 中访问。
+当使用 WSL 1 分发版时，如果计算机设置为可供 LAN 访问，那么在 WSL 中运行的应用程序也可供在 LAN 中访问。
 
 这不是 WSL 2 中的默认情况。 WSL 2 有一个带有其自己独一无二的 IP 地址的虚拟化以太网适配器。 目前，若要启用此工作流，你需要执行与常规虚拟机相同的步骤。 （我们正在寻找改善此体验的方法。）
 
 #### <a name="ipv6-access"></a>IPv6 访问
 
-WSL2 发行版目前无法访问纯 IPv6 地址。 我们正在致力于添加此功能。
+WSL2 分发版目前无法访问纯 IPv6 地址。 我们正在致力于添加此功能。
 
 ## <a name="expanding-the-size-of-your-wsl-2-virtual-hardware-disk"></a>扩展 WSL 2 虚拟硬件磁盘的大小
 
 WSL 2 使用虚拟硬件磁盘 (VHD) 来存储 Linux 文件。 如果达到其最大大小，则可能需要对其进行扩展。
 
-WSL 2 VHD 使用 ext4 文件系统。此 VHD 会自动调整大小以满足你的存储需求，并且其最大初始大小为 256GB。如果你的发行版大小增长到大于 256GB，则会显示错误，指出磁盘空间不足。可以通过扩展 VHD 大小来修复此错误。
+WSL 2 VHD 使用 ext4 文件系统。 此 VHD 会自动调整大小以满足你的存储需求，并且其最大大小为 256GB。 如果你的分发版大小增长到大于 256GB，则会显示错误，指出磁盘空间不足。 可以通过扩展 VHD 大小来纠正此错误。
 
 若要将最大 VHD 大小扩展到超过 256GB，请执行以下操作：
 
 1. 使用 `wsl --shutdown` 命令终止所有 WSL 实例
 
-2. 查找你的发行版安装包名称（“PackageFamilyName”）
-    * 使用 PowerShell（其中，“distro”是发行版名称）输入以下命令：
+2. 查找你的分发版安装包名称（“PackageFamilyName”）
+    * 使用 PowerShell（其中，“distro”是分发版名称）输入以下命令：
     * `Get-AppxPackage -Name "*<distro>*" | Select PackageFamilyName`
 
 3. 找到 WSL 2 安装使用的 VHD 文件 `fullpath`，这将是你的 `pathToVHD`：
@@ -164,9 +164,9 @@ WSL 2 VHD 使用 ext4 文件系统。此 VHD 会自动调整大小以满足你�
       * `Select vdisk file="<pathToVHD>"`
       * `expand vdisk maximum="<sizeInMegaBytes>"`
 
-5. 启动 WSL 发行版（例如 Ubuntu）。
+5. 启动 WSL 分发版（例如 Ubuntu）。
 
-6. 通过从 Linux 发行版命令行运行以下命令，让 WSL 知道它可以扩展其文件系统的大小：
+6. 通过从 Linux 分发版命令行运行以下命令，让 WSL 知道它可以扩展其文件系统的大小：
     * `sudo mount -t devtmpfs none /dev`
     * `mount | grep ext4`
     * 复制此项的名称，该名称类似于：`/dev/sdXX`（X 表示任何其他字符）
@@ -174,4 +174,4 @@ WSL 2 VHD 使用 ext4 文件系统。此 VHD 会自动调整大小以满足你�
     * 使用前面复制的值。 可能还需要安装 resize2fs：`apt install resize2fs`
 
 > [!NOTE]
-> 通常情况下，不要使用 Windows 工具或编辑器来修改、移动或访问 AppData 文件夹中与 WSL 相关的文件。 这样做可能会导致 Linux 发行版损坏。
+> 通常情况下，不要使用 Windows 工具或编辑器来修改、移动或访问 AppData 文件夹中与 WSL 相关的文件。 这样做可能会导致 Linux 分发版损坏。

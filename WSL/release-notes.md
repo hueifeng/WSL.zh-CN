@@ -6,14 +6,30 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 3df4d4b4e0c542a3e87306c01a14b7073eb5e677
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 2fcf24719f037a29bab7652fc75ac82cc0b6176a
+ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235947"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942591"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统发行说明
+
+## <a name="build-20150"></a>内部版本 20150
+有关内部版本 20150 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)。
+
+* 有关 WSL2 GPU 计算，请参阅 [Windows 博客](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)以了解详细信息。
+* 引入 wsl.exe --install 命令行选项以轻松设置 WSL。
+* 引入 wsl.exe --install 命令行选项以管理对 WSL2 内核的更新。 
+* 将 WSL2 设置为默认值。
+* 增加 WSL2 VM 正常关闭超时。
+* 修复映射设备内存 virtio-9p 争用情况。
+* 如果禁用了 UAC，请勿运行提升的 9p 服务器。
+
+## <a name="build-19640"></a>内部版本 19640
+有关内部版本 19640 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2020/06/03/announcing-windows-10-insider-preview-build-19640/)。
+
+* [WSL2] virtio-9p (drvfs) 的稳定性改进。
 
 ## <a name="build-19555"></a>内部版本 19555
 有关内部版本 19555 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2020/01/30/announcing-windows-10-insider-preview-build-19555/)。
