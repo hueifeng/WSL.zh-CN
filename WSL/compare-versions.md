@@ -97,7 +97,7 @@ WSL 2 在实际 Linux 内核上使用轻量级实用工具 VM，内存占用量�
 
 ### <a name="accessing-linux-networking-apps-from-windows-localhost"></a>从 Windows (localhost) 访问 Linux 网络应用
 
-如果要在 Linux 分发版中构建网络应用（例如，在 NodeJS 或 SQL server 上运行的应用），可以使用 `localhost` 从 Windows 应用（如 Edge 或 Chrome Internet 浏览器）访问它（就像往常一样）。
+如果要在 Linux 分发版中构建网络应用（例如，在 NodeJS 或 SQL server 上运行的应用），可以使用 `localhost` 从 Windows 应用（如 Microsoft Edge 或 Chrome Internet 浏览器）访问它（就像往常一样）。
 
 但是，如果运行的是较旧版本的 Windows（版本 18945 或更低版本），则需要获取 Linux 主机 VM 的 IP 地址（或[更新到最新的 Windows 版本](ms-settings:windowsupdate)）。
 
@@ -108,7 +108,7 @@ WSL 2 在实际 Linux 内核上使用轻量级实用工具 VM，内存占用量�
 * 如果已安装 grep 工具，请通过使用以下命令筛选输出来更轻松地查找此地址：`ip addr | grep eth0`
 * 使用此 IP 地址连接到 Linux 服务器。
 
-下图显示了一个示例，该示例使用 Edge 浏览器连接到 Node.js 服务器。
+下图显示了一个示例，该示例使用 Microsoft Edge 浏览器连接到 Node.js 服务器。
 
 ![从 Windows 访问 Linux 网络应用程序](media/wsl2-network-w2l.jpg)
 
