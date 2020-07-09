@@ -1,20 +1,17 @@
 ---
-title: 在 Windows 10 上安装适用于 Linux 的 Windows 子系统 (WSL)
-description: 有关在 Windows 10 上安装适用于 Linux 的 Windows 子系统的说明。
-keywords: BashOnWindows, bash, wsl, Windows, 适用于 Linux 的 Windows 子系统, windowssubsystem, ubuntu, debian, suse, Windows 10, 安装
+title: 存档的 WSL 指令
 ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
-ms.custom: seodec18
-ms.localizationpriority: high
-ms.openlocfilehash: 6ed12ba9d63d3f4038b67489035e13113a372928
-ms.sourcegitcommit: 9f12e168b80775cd967f22f97376e51043c3667e
-ms.translationtype: HT
+ROBOTS: NOINDEX
+ms.openlocfilehash: 1de614dccbbb8d0ef1b9ac070f6ec90281339858
+ms.sourcegitcommit: 16ffb1a096a4a7fbb77c58f92258051930cc82da
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301198"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157953"
 ---
-# <a name="install-windows-subsystem-for-linux"></a>安装适用于 Linux 的 Windows 子系统
+# <a name="archived-instructions"></a>存档说明
 
 以下指南将指导你完成一些步骤，在运行 Windows 10 的计算机上安装适用于 Linux 的 Windows 子系统 (WSL) 时，需要执行这些步骤。
 
