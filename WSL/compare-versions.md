@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windows 子系统, gnu, linux, ubun
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bbd5b36f7857d136d3eb2f75eb3d1a36ac2b94f7
-ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
+ms.openlocfilehash: 8354e9c35d1e97f38c4cf6aa53a861c2c5e290be
+ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84978260"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86093276"
 ---
 # <a name="comparing-wsl-2-and-wsl-1"></a>比较 WSL 2 和 WSL 1
 
@@ -25,10 +25,10 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
  Windows 和 Linux 之间的集成| ✅|✅
  启动时间短| ✅ | ✅
  占用的资源量少| ✅ |✅
+ 可以与当前版本的 VMWare 和 VirtualBox 一起运行| ✅ | ✅
  托管 VM| ❌ | ✅
  完整的 Linux 内核| ❌ |✅
  完全的系统调用兼容性| ❌ | ✅
- 可以与当前版本的 VMWare 和 VirtualBox 一起运行| ✅ | ❌
  跨 OS 文件系统的性能| ✅ | ❌
 
 已在使用 WSL 1 并且想要升级到 WSL 2？ 请按照说明[更新到 WSL 2](./install-win10.md#update-to-wsl-2)！
@@ -36,7 +36,7 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
 只有 Windows 10 版本 2004 的内部版本 19041 或更高版本中才提供 WSL 2。 通过按 Windows 徽标键 + R，检查你的 Windows 版本，然后键入 **winver**，选择“确定”。 （或者在 Windows 命令提示符下输入 `ver` 命令）。 你可能需要[更新到最新的 Windows 版本](ms-settings:windowsupdate)。 对于低于 19041 的版本，WSL 根本不受支持。
 
 > [!NOTE]
-> WSL 2 可与[以前版本的 VMWare](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) 和 [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) 配合使用。
+> WSL 2 适用于 [VMWare 15.5.5+](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) 和 [VirtualBox 6+](https://www.virtualbox.org/wiki/Changelog-6.0)。
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>使用 Linux 文件系统以提高性能
 

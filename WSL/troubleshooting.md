@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windows 子系统, windowssubsystem
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 9028f1e89e92da94d82b16603b3af60876a4cb86
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: cc8f032a99fb087b7ef614dd3a3574cb8ee3f2da
+ms.sourcegitcommit: ba52d673c123fe8ae61e872a33e218cfc30a1f82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "79318141"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86033061"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>排查适用于 Linux 的 Windows 子系统问题
 
@@ -39,6 +39,41 @@ ms.locfileid: "79318141"
 最后，如果你的问题与 Windows 终端、Windows 控制台或命令行 UI 相关，请使用 Windows 终端存储库： https://github.com/microsoft/terminal
 
 ## <a name="common-issues"></a>常见问题
+
+### <a name="cannot-access-wsl-files-from-windows"></a>无法从 Windows 访问 WSL 文件
+9p 协议文件服务器在 Linux 端提供服务，以允许 Windows 访问 Linux 文件系统。 如果在 Windows 上无法使用 `\\wsl$` 访问 WSL，则可能是因为 9P 无法正确启动。
+
+要检查这一点，可以使用 `dmesg |grep 9p` 来检查启动日志，这将显示任何错误。 成功的输出如下所示： 
+
+```
+[    0.363323] 9p: Installing v9fs 9p2000 file system support
+[    0.363336] FS-Cache: Netfs '9p' registered for caching
+[    0.398989] 9pnet: Installing 9P2000 support
+```
+
+请参阅[本 Github 线程](https://github.com/microsoft/wsl/issues/5307)，获取有关此问题的进一步讨论。
+
+### <a name="cant-start-wsl-2-distro-and-only-see-wsl-2-in-output"></a>无法启动 WSL 2 发行版，仅在输出中看到“WSL 2”
+如果你的显示语言不是英语，则可能会看到截断的错误文本。
+
+```powershell
+C:\Users\me>wsl
+WSL 2
+```
+
+要解决此问题，请访问 `https://aka.ms/wsl2kernel`，按照该文档页面上的指示手动安装内核。 
+
+### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>请启用 Virtual Machine Platform Windows 功能，并确保在 BIOS 中启用了虚拟化。
+
+1. 请查看 [Hyper-V 系统要求](https://docs.microsoft.com/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)
+2. 如果你的计算机是 VM，请手动启用[嵌套虚拟化](https://docs.microsoft.com/windows/wsl/wsl2-faq#can-i-run-wsl-2-in-a-virtual-machine)。 使用 admin 启动 powershell，并运行： 
+
+```powershell
+Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+```
+
+3. 请按照电脑制造商提供的虚拟化启用指南进行操作。 通常，这可能涉及使用系统 BIOS 来确保在 CPU 上启用了这些功能。 
+4. 启用 `Virtual Machine Platform` 可选组件后，请重启计算机。 
 
 ### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a>Bash 在连接到 VPN 后断开网络连接
 
@@ -175,9 +210,9 @@ sudo update-locale LANG=en_US.UTF8
 ### <a name="check-your-build-number"></a>检查内部版本号
 
 若要查找电脑的体系结构和 Windows 内部版本号，请打开  
-“设置” > “系统” > “关于”   
+“设置” > “系统” > “关于”  
 
-查看“OS 内部版本”和“系统类型”字段。    
+查看“OS 内部版本”和“系统类型”字段。   
     ![“内部版本”和“系统类型”字段的屏幕截图](media/system.png)
 
 若要查找 Windows Server 内部版本号，请在 PowerShell 中运行以下命令：  

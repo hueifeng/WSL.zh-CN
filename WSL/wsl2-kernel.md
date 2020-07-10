@@ -5,12 +5,12 @@ keywords: wsl, windows, linux 内核, 适用于 Linux 的 Windows 子系统, 内
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 1628bea2f1bae590928b055425413e5b085dffef
-ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
+ms.openlocfilehash: bef722f5653380d9f6d104f1a7c116a7599658c9
+ms.sourcegitcommit: ba52d673c123fe8ae61e872a33e218cfc30a1f82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153043"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86033046"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>更新 WSL 2 Linux 内核
 
@@ -39,3 +39,23 @@ ms.locfileid: "84153043"
 ## <a name="future-plans-for-updating-the-wsl2-linux-kernel"></a>有关更新 WSL2 Linux 内核的未来计划
 
 有关详细信息，请参阅 [Windows 命令行博客](https://aka.ms/cliblog)上的文章[对更新 WSL2 Linux 内核的更改](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004)。
+
+## <a name="troubleshooting"></a>疑难解答
+
+### <a name="this-update-only-applies-to-machines-with-the-windows-subsystem-for-linux"></a>此更新仅适用于具有适用于 Linux 的 Windows 子系统的计算机
+要安装 MSI 内核，需要 WSL，应先启用。 如果失败，将看到以下消息：`This update only applies to machines with the Windows Subsytem for Linux`。 
+
+出现此消息有三个可能的原因：
+
+1. 你仍使用旧版 Windows，不支持 WSL 2。 请查看 [WSL 2 要求](https://docs.microsoft.com/windows/wsl/install-win10#update-to-wsl-2)，升级到使用 WSL 2。 
+2. 未启用 `Windows Subsystem for Linux`。 请按照[适用于 Linux 的 Windows 子系统安装指南](https://docs.microsoft.com/windows/wsl/install-win10)进行操作。
+3. 启用 `Windows Subsystem for Linux` 后，需要重启才能生效，请重启计算机，然后重试。
+
+### `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`
+
+每次 %SystemRoot%\system32\lxss\tools\, 中缺少内核时，都可能会出现上述错误。
+
+解决该错误的一些方法如下：
+
+1. 请按照以下网站上的说明手动安装 Linux 内核： https://aka.ms/wsl2kernel
+2. 从“添加或删除程序”卸载 MSI，然后重新安装

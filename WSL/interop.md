@@ -4,12 +4,12 @@ description: 介绍 Windows 与适用于 Linux 的 Windows 子系统上运行的
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2a9b6c8ac65fe28e029ada7f86475c44220a93fe
-ms.sourcegitcommit: cb8a61e7de08b1c18622fc78bc5dfa38786e921a
+ms.openlocfilehash: d78cc53aa40f896c20e40a5ef00570a97ccac258
+ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663130"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86093267"
 ---
 # <a name="windows-interoperability-with-linux"></a>Windows 与 Linux 的互操作性
 
@@ -151,6 +151,7 @@ WSL 和 Windows 共享一个特殊环境变量 `WSLENV`（为了桥接 Windows �
 
 > [!NOTE]
 > 在 17063 以前，只有 WSL 可访问的 Windows 环境变量是 `PATH`（因此可以从 WSL 下启动 Win32 可执行文件）。 从 17063 开始，`WSLENV` 开始受支持。
+> WSLENV 区分大小写。
 
 ## <a name="wslenv-flags"></a>WSLENV 标志
 
